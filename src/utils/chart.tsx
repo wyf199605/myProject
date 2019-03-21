@@ -8,7 +8,7 @@ interface IChartOption {
 interface ChartData {
     name: string;
     value: number;
-    field?: obj;
+    data?: obj;
 }
 
 export interface IPieOption extends IChartOption {

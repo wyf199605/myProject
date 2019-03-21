@@ -2,11 +2,15 @@ import echarts from 'echarts';
 import React from 'react';
 import {Chart} from "../../utils/chart";
 
-export class ChartPage extends React.Component{
+export class ChartPage extends React.Component<obj>{
     constructor(props: obj){
         super(props);
         this.wrapper = React.createRef();
     }
+
+    static defaultProps = {
+
+    };
 
     protected wrapper: React.RefObject<HTMLDivElement>;
 
@@ -19,12 +23,25 @@ export class ChartPage extends React.Component{
     }
 
     componentDidMount(){
-
         Chart.drawLine(this.wrapper.current, {
             title: {
                 text: 'test'
             },
             data: [
+                [
+                    {
+                        name: 'test1',
+                        value: 10
+                    },
+                    {
+                        name: 'test2',
+                        value: 20
+                    },
+                    {
+                        name: 'test3',
+                        value: 30
+                    }
+                ],
                 [
                     {
                         name: 'test1',
